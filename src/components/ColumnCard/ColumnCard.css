@@ -1,0 +1,9 @@
+.columnCard {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(69, 68, 82);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+}

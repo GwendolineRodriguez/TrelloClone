@@ -1,0 +1,14 @@
+.taskCard {
+  display: flex;
+  flex-direction: row;
+  border-radius: 3px;
+  background-color: rgb(47, 47, 57);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: grab;
+  margin: 0.5rem 1rem;
+  padding: 0.1rem 1rem;
+}
+
+.taskCard:active {
+  cursor: grabbing;
+}
