@@ -1,5 +1,7 @@
+import { Status } from "./Status";
+
 export interface Task {
   id: number;
-  status: string;
+  status: Status;
   title: string;
 }

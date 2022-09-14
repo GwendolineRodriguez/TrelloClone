@@ -1,1 +1,3 @@
-# Jira Clone
+# Trello Clone
+
+Drag&Drop API, Caching.

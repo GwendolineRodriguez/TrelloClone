@@ -1,8 +1,9 @@
+import { Column } from "./Column";
 import { Task } from "./Task";
 
-export interface Story {
+export interface Board {
   id: number;
   name: string;
-  columns: string[];
+  columns: Column[];
   tasks: Task[];
 }

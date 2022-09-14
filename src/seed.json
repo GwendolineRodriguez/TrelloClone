@@ -1,40 +1,31 @@
 {
   "id": 6,
-  "name": "Sprint board",
-  "stories": [
+  "name": "Board",
+  "columns": [
+    { "id": 34534, "name": "todo" },
+    { "id": 34535, "name": "inprogress" },
+    { "id": 34536, "name": "done" }
+  ],
+  "tasks": [
     {
-      "id": 23453,
-      "name": "Allow users to do more stuff",
-      "columns": ["todo", "inprogress", "done"],
-      "tasks": [
-        {
-          "id": 4,
-          "status": "todo",
-          "title": "Implement crazy feature"
-        },
-        {
-          "id": 5,
-          "status": "todo",
-          "title": "Implement unit tests"
-        }
-      ]
+      "id": 4,
+      "status": "todo",
+      "title": "Implement crazy feature"
     },
     {
-      "id": 23454,
-      "name": "Fix cuckoo bug",
-      "columns": ["todo", "inprogress", "done"],
-      "tasks": [
-        {
-          "id": 4,
-          "status": "todo",
-          "title": "Investigate"
-        },
-        {
-          "id": 5,
-          "status": "todo",
-          "title": "PR"
-        }
-      ]
+      "id": 5,
+      "status": "todo",
+      "title": "Implement unit tests"
+    },
+    {
+      "id": 6,
+      "status": "todo",
+      "title": "Investigate"
+    },
+    {
+      "id": 7,
+      "status": "inprogress",
+      "title": "PR"
     }
   ]
 }
