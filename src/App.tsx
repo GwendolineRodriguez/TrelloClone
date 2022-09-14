@@ -1,9 +1,11 @@
-import React from 'react';
-import './App.css';
+import "./App.css";
+import Sprintboard from "./components/Sprintboard/Sprintboard";
+import seed from "./seed.json";
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
+      <Sprintboard sprint={seed} />
     </div>
   );
 }
