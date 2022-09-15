@@ -2,9 +2,9 @@
   "id": 6,
   "name": "Board",
   "columns": [
-    { "id": 34534, "name": "TODO" },
-    { "id": 34535, "name": "INPROGRESS" },
-    { "id": 34536, "name": "DONE" }
+    { "id": 34534, "name": "To Do", "status": "TODO" },
+    { "id": 34535, "name": "In Progress", "status": "INPROGRESS" },
+    { "id": 34536, "name": "Done", "status": "DONE" }
   ],
   "tasks": [
     {

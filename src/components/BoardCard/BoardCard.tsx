@@ -12,12 +12,11 @@ interface IProps {
 function BoardCard({ board }: IProps) {
   const [currentBoard, setBoard] = useState<Board>(board);
   const tasks = board.tasks;
-  const updateTaskStatus = (targetTask: Task) => {
-    const id = currentBoard.tasks.findIndex(
-      (task) => task.id === targetTask.id
-    );
-    currentBoard.tasks[id].status = Status.INPROGRESS;
-    setBoard(currentBoard);
+  const updateTaskStatus = (taskId: number, status: Status) => {
+    const id = currentBoard.tasks.findIndex((task) => task.id === taskId);
+    const newBoard = { ...currentBoard };
+    newBoard.tasks[id].status = status;
+    setBoard(newBoard);
     recordBoard(currentBoard);
   };
   const recordBoard = (board: Board) => {
@@ -33,7 +32,7 @@ function BoardCard({ board }: IProps) {
 
       <div className='columns'>
         {currentBoard.columns.map((column) => {
-          const filteredTasks = getTaskList(tasks, column.name);
+          const filteredTasks = getTaskList(tasks, column.status);
           return (
             <ColumnCard
               key={column.id}

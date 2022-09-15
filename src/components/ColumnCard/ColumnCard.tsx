@@ -8,22 +8,18 @@ import { Status } from "../../models/Status";
 interface IProps {
   column: Column;
   tasks: Task[];
-  onTaskMoved: (task: Task) => void;
+  onTaskMoved: (taskId: number, status: Status) => void;
 }
 
 function ColumnCard({ column, tasks, onTaskMoved }: IProps) {
-  const status =
-    Object.values(Status)[Object.keys(Status).indexOf(column.name)];
-
   const onDropTask = (event: DragEvent<HTMLDivElement>) => {
     event.preventDefault();
-    // onTaskMoved();
-    console.log("onDropTask");
+    const data = event.dataTransfer.getData("text");
+    const taskId = Number(data);
+    onTaskMoved(taskId, column.status);
   };
   const onDragOver = (event: DragEvent<HTMLDivElement>) => {
     event.preventDefault();
-    // TODO: Effect while draging over
-    console.log("onDragOver");
   };
   return (
     <div
@@ -32,9 +28,9 @@ function ColumnCard({ column, tasks, onTaskMoved }: IProps) {
       onDrop={onDropTask}
       onDragOver={onDragOver}
     >
-      <h2>{status}</h2>
+      <h2>{column.name}</h2>
       {tasks.map((task) => (
-        <TaskCard key={task.id} task={task} onTaskMoved={onTaskMoved} />
+        <TaskCard key={task.id} task={task} />
       ))}
     </div>
   );

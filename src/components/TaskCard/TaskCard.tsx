@@ -4,13 +4,11 @@ import "./TaskCard.css";
 
 interface IProps {
   task: Task;
-  onTaskMoved: (task: Task) => void;
 }
 
-function TaskCard({ task, onTaskMoved }: IProps) {
+function TaskCard({ task }: IProps) {
   const dragTask = (event: DragEvent<HTMLDivElement>) => {
-    event.dataTransfer.setData("??", event.currentTarget.id);
-    console.log(event.currentTarget.id);
+    event.dataTransfer.setData("text", event.currentTarget.id);
   };
   return (
     <div
