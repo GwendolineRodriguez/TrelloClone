@@ -2,29 +2,29 @@
   "id": 6,
   "name": "Board",
   "columns": [
-    { "id": 34534, "name": "todo" },
-    { "id": 34535, "name": "inprogress" },
-    { "id": 34536, "name": "done" }
+    { "id": 34534, "name": "TODO" },
+    { "id": 34535, "name": "INPROGRESS" },
+    { "id": 34536, "name": "DONE" }
   ],
   "tasks": [
     {
       "id": 4,
-      "status": "todo",
+      "status": "TODO",
       "title": "Implement crazy feature"
     },
     {
       "id": 5,
-      "status": "todo",
+      "status": "TODO",
       "title": "Implement unit tests"
     },
     {
       "id": 6,
-      "status": "todo",
+      "status": "TODO",
       "title": "Investigate"
     },
     {
       "id": 7,
-      "status": "inprogress",
+      "status": "INPROGRESS",
       "title": "PR"
     }
   ]
